@@ -1,0 +1,19 @@
+build maven:
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  script:
+    - docker build -t $TAG -f images/mavenDockerfile .
+    - docker push $TAG
+  variables:
+    IMAGE_NAME: maven
+    TAG: $CI_REGISTRY/$CI_PROJECT_PATH/$IMAGE_NAME:latest
+
+build gradle:
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  script:
+    - docker build -t $TAG -f images/gradleDockerfile .
+    - docker push $TAG
+  variables:
+    IMAGE_NAME: gradle
+    TAG: $CI_REGISTRY/$CI_PROJECT_PATH/$IMAGE_NAME:latest
