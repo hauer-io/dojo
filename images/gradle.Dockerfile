@@ -20,4 +20,4 @@ RUN apt-get update && \
 
 WORKDIR /dojo/work
 ENTRYPOINT ["/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
-CMD ["/usr/bin/fish"]
+CMD ["/bin/bash"]
