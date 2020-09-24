@@ -10,6 +10,8 @@ build maven:
   rules:
     - changes:
         - images/maven.Dockerfile
+  only:
+    - master
 
 build gradle:
   before_script:
@@ -23,3 +25,5 @@ build gradle:
   rules:
     - changes:
         - images/gradle.Dockerfile
+  only:
+    - master

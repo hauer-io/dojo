@@ -9,7 +9,6 @@ RUN chmod +x /tini
 # Install common Dojo scripts
 ENV DOJO_VERSION=0.10.0 \
     RUNTIME_DEPS="sudo git ca-certificates wget make fish"
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends $RUNTIME_DEPS && \
     echo 'dojo ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers && \
