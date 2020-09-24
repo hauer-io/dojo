@@ -1,1 +1,2 @@
 DOJO_DOCKER_IMAGE=gitlabregistry.exxeta.com/jan/dojo/gradle:latest
+DOJO_DOCKER_OPTIONS="-p 8080:8080"
