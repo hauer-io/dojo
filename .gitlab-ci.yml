@@ -2,6 +2,8 @@ build maven:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
   script:
+    - ls
+    - ls images
     - docker build -t $TAG -f images/mavenDockerfile .
     - docker push $TAG
   variables:
