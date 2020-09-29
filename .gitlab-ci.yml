@@ -26,6 +26,7 @@ build gradle:
 
 test gradle:
   image: "hauer/dojo:latest"
+  stage: test
   script:
     - cd samples/gradle
     - dojo gradle test
