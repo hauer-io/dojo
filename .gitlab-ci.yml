@@ -23,3 +23,11 @@ build gradle:
   rules:
     - changes:
         - images/gradle.Dockerfile
+
+test gradle:
+  image: "gitlabregistry.exxeta.com/jan/dojo/gradle"
+  script:
+    - pwd
+    - ls
+    - cd samples/gradle
+    - gradle test
