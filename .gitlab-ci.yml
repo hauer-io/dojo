@@ -25,12 +25,7 @@ build gradle:
         - images/gradle.Dockerfile
 
 test gradle:
-  image:
-    name: "gitlabregistry.exxeta.com/jan/dojo/gradle"
-    entrypoint: ["/tini", "-g", "--", "/etc/dojo.d/variables/01-bash-functions.sh"]
+  image: "hauer/dojo:latest"
   script:
-    - whoami
-    - pwd
-    - ls
     - cd samples/gradle
-    - gradle test
+    - dojo gradle test
