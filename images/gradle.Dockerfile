@@ -18,6 +18,8 @@ RUN apt-get update && \
     rm -r /tmp/dojo_git && \
     apt-get clean
 
+USER dojo
+
 WORKDIR /dojo/work
 ENTRYPOINT ["/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
 CMD ["/bin/bash"]
