@@ -27,7 +27,7 @@ build gradle:
 test gradle:
   image:
     name: "gitlabregistry.exxeta.com/jan/dojo/gradle"
-    entrypoint: ["/tini", "-g", "--", "/bin/bash"]
+    entrypoint: ["/tini", "-g", "--", "/etc/dojo.d/variables/01-bash-functions.sh"]
   script:
     - whoami
     - pwd
