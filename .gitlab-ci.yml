@@ -1,4 +1,4 @@
-image: gradle
+image: hauer/dojo:yamllint-1.23
 
 test gradle:
   stage: test
