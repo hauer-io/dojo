@@ -1,9 +1,6 @@
 image:
   name: hauer/dojo:yamllint-1.23
-  entrypoint: ['bash', '-c', 'chown dojo:dojo -R /dojo/work && exec su dojo -c bash']
-
-variables:
-  GIT_CLONE_PATH: /dojo/work
+  entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && exec su dojo -c bash']
 
 test gradle:
   stage: test
