@@ -1,7 +1,13 @@
 image: hauer/dojo:yamllint-1.23
 
+before_script:
+  - ls -la
+  - adduser ci -D -u 2342
+
 test gradle:
   stage: test
   script:
+    - cat /etc/passwd
     - pwd
+    - ls -la /home/
     - ls -la
