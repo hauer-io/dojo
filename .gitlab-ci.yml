@@ -1,5 +1,5 @@
 test gradle:
   stage: test
   script:
-    - whoami
-    - cat /etc/passwd
+    - pwd
+    - ls -la
