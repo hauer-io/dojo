@@ -1,6 +1,6 @@
 image:
   name: hauer/dojo:yamllint-1.23
-  entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && exec su dojo -c bash']
+  entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && rmdir /dojo/work && ln -s /builds/jan/dojo /dojo/work && exec su dojo -c bash']
 
 test gradle:
   stage: test
