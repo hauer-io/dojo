@@ -1,6 +1,6 @@
 image:
   name: hauer/dojo:yamllint-1.23
-  entrypoint: ['bash', '-c', 'pwd && exec su dojo -c bash']
+  entrypoint: ['bash', '-c', 'ls -R / && exec su dojo -c bash']
 
 
 test gradle:
