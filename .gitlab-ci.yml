@@ -6,4 +6,4 @@ image:
 test gradle:
   stage: test
   script:
-    - sudo chown -R dojo:dojo .
+    - ls -la
