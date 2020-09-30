@@ -8,9 +8,4 @@ before_script:
 test gradle:
   stage: test
   script:
-    - whoami
-    - adduser ci -D -u 2342
-    - cat /etc/passwd
-    - pwd
-    - ls -la /home/
-    - ls -la
+    - sudo chown -R dojo:dojo .
