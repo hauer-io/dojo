@@ -1,9 +1,7 @@
-image: hauer/dojo:yamllint-1.23
+image:
+  name: hauer/dojo:yamllint-1.23
+  entrypoint: ['bash', '-c', 'useradd dojo && exec su myuser -c bash']
 
-before_script:
-  - ls -la
-  - pwd
-  - whoami
 
 test gradle:
   stage: test
