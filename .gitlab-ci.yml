@@ -4,7 +4,7 @@ image:
   # entrypoint: ["/sbin/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
 
 variables:
-  dojo_work: $CI_PROJECT_DIR
+  DOJO_WORK_INNER: $CI_PROJECT_DIR
 
 test gradle:
   stage: test
