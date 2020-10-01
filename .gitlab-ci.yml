@@ -1,5 +1,5 @@
 image:
-  name: hauer/dojo:jmeter-5.3
+  name: hauer/dojo:mvn-3.6
   # entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && rmdir /dojo/work && ln -s /builds/jan/dojo /dojo/work && exec su dojo -c bash']
   # entrypoint: ["/sbin/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
 
@@ -9,7 +9,9 @@ variables:
 test gradle:
   stage: test
   script:
+    - pwd
+    - ls -la
     - echo $dojo_home
     - ls -la $dojo_home
-    - pwd
+    - echo $dojo_work
     - ls -la $dojo_work
