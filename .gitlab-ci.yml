@@ -1,7 +1,5 @@
 image:
-  name: hauer/dojo:jre-14
-  # entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && rmdir /dojo/work && ln -s /builds/jan/dojo /dojo/work && exec su dojo -c bash']
-  # entrypoint: ["/sbin/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
+  name: hauer/dojo:jre-15
 
 variables:
   DOJO_WORK_INNER: $CI_PROJECT_DIR
@@ -15,3 +13,4 @@ test gradle:
     - ls -la $dojo_home
     - echo $dojo_work
     - ls -la $dojo_work
+    - java --version
