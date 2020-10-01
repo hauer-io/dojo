@@ -9,10 +9,7 @@ variables:
 test gradle:
   stage: test
   script:
-    - env
-    - echo $CI_PROJECT_DIR
-    - echo $dojo_work
+    - echo $dojo_home
+    - ls -la $dojo_home
     - pwd
-    - ls -la
-    - cd /dojo/work
-    - ls -la
+    - ls -la $dojo_work
