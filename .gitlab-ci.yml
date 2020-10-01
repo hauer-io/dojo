@@ -9,6 +9,7 @@ variables:
 test gradle:
   stage: test
   script:
+    - env
     - echo $CI_PROJECT_DIR
     - echo $dojo_work
     - pwd
