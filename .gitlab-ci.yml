@@ -1,12 +1,13 @@
 image:
   name: hauer/dojo:yamllint-1.23
-  entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && rmdir /dojo/work && ln -s /builds/jan/dojo /dojo/work && exec su dojo -c bash']
+  # entrypoint: ['bash', '-c', 'chown dojo:dojo -R /builds/jan/dojo && rmdir /dojo/work && ln -s /builds/jan/dojo /dojo/work && exec su dojo -c bash']
+  entrypoint: ["/tini", "-g", "--", "/usr/bin/entrypoint.sh"]
 
 test gradle:
   stage: test
   script:
+    - echo $CI_PROJECT_DIR
     - pwd
     - ls -la
     - cd /dojo/work
     - ls -la
-    - echo $GIT_CLONE_PATH
