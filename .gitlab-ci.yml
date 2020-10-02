@@ -1,5 +1,5 @@
 image:
-  name: hauer/dojo:jre-15
+  name: hauer/dojo:gradle
 
 variables:
   DOJO_WORK_INNER: $CI_PROJECT_DIR
@@ -7,10 +7,6 @@ variables:
 test gradle:
   stage: test
   script:
-    - pwd
+    - cd samples/gradle
     - ls -la
-    - echo $dojo_home
-    - ls -la $dojo_home
-    - echo $dojo_work
-    - ls -la $dojo_work
-    - java --version
+    - gradle test
